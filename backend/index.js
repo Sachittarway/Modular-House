@@ -14,15 +14,15 @@ const PORT = process.env.PORT;
 app.use(express.json());
 app.use(cors());
 
-// app.use("/vendors", vendorRouter);
-// app.use("/blogs", blogRouter);
+app.use("/vendors", vendorRouter);
+app.use("/blogs", blogRouter);
 app.get("/", (req, res) => {
   res.send("Hello World");
 });
-// app.use((err, req, res, next) => {
-//   console.error(err.stack);
-//   res.status(500).send("Something broke!");
-// });
+app.use((err, req, res, next) => {
+  console.error(err.stack);
+  res.status(500).send("Something broke!");
+});
 
 const server = () => {
   db();
