@@ -1,0 +1,160 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap");
+
+.ring {
+  margin: 0 auto;
+  position: relative;
+  width: 600px;
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 100px;
+}
+
+.ring i {
+  position: absolute;
+  inset: 0;
+  border: 2px solid #fff;
+  transition: 0.5s;
+}
+
+.ring i:nth-child(1) {
+  border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+  animation: animate 6s linear infinite;
+}
+
+.ring i:nth-child(2) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate 4s linear infinite;
+}
+
+.ring i:nth-child(3) {
+  border-radius: 41% 44% 56% 59%/38% 62% 63% 37%;
+  animation: animate2 10s linear infinite;
+}
+
+.ring:hover i {
+  border: 6px solid var(--clr);
+  filter: drop-shadow(0 0 20px var(--clr));
+}
+
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes animate2 {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.login {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 40px;
+  width: 300px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.login h2 {
+  font-size: 2em;
+  color: #fff;
+  margin-left: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+
+.login .inputBx {
+  position: relative;
+  width: 100%;
+}
+
+.login .inputBx input {
+  position: relative;
+  width: 100%;
+  padding: 12px 20px;
+  background: transparent;
+  border: 2px solid #fff;
+  border-radius: 40px;
+  font-size: 1.2em;
+  color: #fff;
+  box-shadow: none;
+  outline: none;
+}
+
+.login .inputBx input[type="submit"] {
+  margin-left: 20px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 100%;
+  background: #0078ff;
+  background: linear-gradient(45deg, #9a0234, #fff172);
+  border: none;
+  cursor: pointer;
+}
+
+.login .inputBx input::placeholder {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.login .links {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.login .links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media only screen and (max-width: 1280px) {
+  .ring {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .ring {
+    width: 500px;
+    height: 500px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .ring {
+    width: 400px;
+    height: 400px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .ring {
+    width: 300px;
+    height: 300px;
+  }
+
+  .login h2 {
+    font-size: 1.5em;
+  }
+
+  .login .inputBx input[type="submit"] {
+    margin-top: 30px;
+  }
+}
